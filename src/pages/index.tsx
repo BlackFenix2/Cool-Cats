@@ -14,7 +14,7 @@ const style = css`
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <h1>Wall of Donuts (WIP)</h1>
+    <h1>Cool Cats (WIP)</h1>
     <p>Pardon our appearance, our website is under construction </p>
 
     <div>
