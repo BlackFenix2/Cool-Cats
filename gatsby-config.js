@@ -29,7 +29,7 @@ module.exports = {
         background_color: '#866539',
         theme_color: '#FDBA55',
         display: 'minimal-ui',
-        icon: 'src/images/Icon.png' // This path is relative to the root of the site.
+        icon: 'src/images/icon.png' // This path is relative to the root of the site.
       }
     },
     //add support for absolute paths for gatsby loader

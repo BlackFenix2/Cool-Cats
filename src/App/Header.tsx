@@ -48,7 +48,7 @@ export const Header = () => (
         padding: 8px 16px;
       `}
     >
-      Wall of Donuts!{' '}
+      Cool Cats!{' '}
       <span role="img" aria-label="Image">
         😼
       </span>
