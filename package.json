@@ -51,6 +51,7 @@
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.2.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-antd": "^2.0.2",
     "gatsby-plugin-emotion": "^4.1.0",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-layout": "^1.1.0",
@@ -68,7 +69,9 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
   },
-  "keywords": ["donut"],
+  "keywords": [
+    "donut"
+  ],
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
