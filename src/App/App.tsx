@@ -1,29 +1,28 @@
 import React from 'react';
-import { Global, css } from '@emotion/core';
 
-import Typography from './App.style';
+import { Layout, Affix } from 'antd';
 import { Header } from './Header';
 import { Body } from './Body';
 import { Footer } from './Footer';
+// import antd CSS
+import 'antd/dist/antd.css';
 
 const App = ({ children }) => <AppLayout>{children}</AppLayout>;
 
 const AppLayout = ({ children }) => (
-  <React.Fragment>
-    <Global styles={Typography} />
-    <section
-      css={css`
-        display: flex;
-        flex-flow: column;
-        align-items: stretch;
-        min-height: 100vh;
-      `}
-    >
-      <Header />
+  <Layout className="layout">
+    <Affix>
+      <Layout.Header>
+        <Header />
+      </Layout.Header>
+    </Affix>
+    <Layout.Content>
       <Body>{children}</Body>
+    </Layout.Content>
+    <Layout.Footer>
       <Footer />
-    </section>
-  </React.Fragment>
+    </Layout.Footer>
+  </Layout>
 );
 
 export default App;

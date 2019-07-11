@@ -6,9 +6,15 @@ interface Props {
 }
 
 const style = css`
-  transition: 0.2s;
+  transition: 200ms;
   text-decoration: none;
   color: inherit;
+  & > * {
+    transition: transform 200ms;
+  }
+  & > :hover {
+    transform: scale(1.1);
+  }
 `;
 
 /**

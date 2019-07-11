@@ -5,6 +5,7 @@ import { css } from '@emotion/core';
 
 import img from 'src/images/Construction.png';
 import fadeIn from 'src/components/animations/fadeIn';
+import { Button } from 'antd';
 
 const style = css`
   width: 500px;
@@ -15,6 +16,7 @@ const IndexPage = () => (
   <>
     <SEO title="Home" />
     <h1>Cool Cats (WIP)</h1>
+    <Button>www</Button>
     <p>Pardon our appearance, our website is under construction </p>
 
     <div>
