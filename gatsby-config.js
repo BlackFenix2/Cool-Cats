@@ -6,7 +6,21 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-layout',
-    'gatsby-plugin-antd',
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'text-color': 'rgba(0, 0, 0)'
+        }
+      }
+    },
     'gatsby-plugin-eslint',
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion',

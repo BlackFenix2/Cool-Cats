@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from 'src/components/SEO';
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import { css } from '@emotion/core';
 
 import img from 'src/lib/img/cat-creep.jpg';
