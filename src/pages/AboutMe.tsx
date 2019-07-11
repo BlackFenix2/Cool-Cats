@@ -5,7 +5,7 @@ import fadeIn from 'src/components/animations/fadeIn';
 import { css } from '@emotion/core';
 
 const style = css`
-  height: 40vh;
+  height: 60vh;
   ${fadeIn}
 `;
 const CoolCats = () => (
@@ -14,7 +14,7 @@ const CoolCats = () => (
     <h1>About me</h1>
     <div>
       <img src={img} alt="Construction banner" css={style} />
-      <p>Hello, i am Chris P. the cool cat!</p>
+      <p>Ay yo, i am Chris P. the cool cat!</p>
     </div>
   </>
 );

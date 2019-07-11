@@ -6,7 +6,7 @@ const Banner = () => (
   <div
     css={css`
       overflow: hidden;
-      height: 30vh;
+      max-height: 200px;
     `}
   >
     <img

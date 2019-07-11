@@ -4,70 +4,28 @@ import { Row, Col, Card } from 'antd';
 import { css } from '@emotion/core';
 
 import img from 'src/lib/img/cat-creep.jpg';
+import CatCard from 'src/components/CoolCats/CatCard';
 
 const CoolCats = () => (
   <>
     <SEO title="Cool Cats" />
-    <Row
-      gutter={16}
-      css={css`
-        padding-top: 10px;
-      `}
-    >
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
-      <Col span={8}>
-        <Card cover={<img src={img} alt="creepy cat" />}>Creepy cat</Card>
-      </Col>
+    <Row gutter={16}>
+      {new Array(12).fill(0).map((item, i) => (
+        <Col
+          key={i}
+          span={8}
+          xs={24}
+          sm={24}
+          md={8}
+          lg={8}
+          xl={8}
+          css={css`
+            padding-top: 20px;
+          `}
+        >
+          <CatCard img={img} />
+        </Col>
+      ))}
     </Row>
   </>
 );
