@@ -22,6 +22,9 @@ const NavBar = () => (
         </Link>
       </Menu.Item>
       <Menu.Item>
+        <Link to="/AboutMe">About Me</Link>
+      </Menu.Item>
+      <Menu.Item>
         <Link to="/CoolCats">Cool Cats</Link>
       </Menu.Item>
       <Menu.Item>

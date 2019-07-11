@@ -8,14 +8,14 @@ const Credits = () => (
     <div>
       images/vectors
       <p>
-        Food vectors created by freepik -
-        <TabLink href="https://www.freepik.com/free-photos-vectors/food">
+        Images provided by unsplash -
+        <TabLink href="https://unsplash.com">
           <span
             css={css`
               text-decoration: underline;
             `}
           >
-            freepik.com
+            unsplash.com
           </span>
         </TabLink>
       </p>
