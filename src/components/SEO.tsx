@@ -7,24 +7,18 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import useSiteMetadata from 'src/services/graphql/static/useSiteMetadata';
+
+interface Props {
+  lang?: string;
+  meta?: [];
+  description?: string;
+  title: string;
+}
 
 /** Search Engine Optimization component for react-helmet */
-const Seo = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-
+const Seo = ({ description, lang = 'en', meta = [], title }: Props) => {
+  const site = useSiteMetadata();
   const metaDescription = description || site.siteMetadata.description;
 
   return (
@@ -70,12 +64,6 @@ const Seo = ({ description, lang, meta, title }) => {
       ].concat(meta)}
     />
   );
-};
-
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``
 };
 
 export default Seo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Link } from 'gatsby';
-import img from 'src/images/coolCats.png';
-import { Menu, Icon } from 'antd';
+import img from 'src/lib/img/icon.png';
+import { Menu } from 'antd';
 import { css } from '@emotion/core';
 
 const NavBar = () => (

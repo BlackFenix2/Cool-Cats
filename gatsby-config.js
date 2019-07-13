@@ -29,7 +29,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`
+        path: `${__dirname}/src/lib/img`
       }
     },
     'gatsby-transformer-sharp',
@@ -43,7 +43,7 @@ module.exports = {
         background_color: '#866539',
         theme_color: '#FDBA55',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png' // This path is relative to the root of the site.
+        icon: 'static/icon.png' // This path is relative to the root of the site.
       }
     },
     //add support for absolute paths for gatsby loader
@@ -57,16 +57,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          '/*.js': ['cache-control: public, max-age=31536000, immutable'],
-          '/*.css': ['cache-control: public, max-age=31536000, immutable'],
-          '/sw.js': ['cache-control: public, max-age=0, must-revalidate']
-        }
-      }
-    }
+    'gatsby-plugin-offline'
   ]
 };

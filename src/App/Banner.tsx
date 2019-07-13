@@ -1,23 +1,20 @@
 import React from 'react';
-import img from 'src/lib/img/cat-banner.jpg';
 import { css } from '@emotion/core';
 
-const Banner = () => (
-  <div
-    css={css`
-      overflow: hidden;
-      max-height: 200px;
-    `}
-  >
-    <img
-      src={img}
-      alt="Cat banner"
+import BackgroundImage from 'gatsby-background-image';
+import useStaticImage from 'src/services/graphql/static/useStaticImage';
+
+const Banner = () => {
+  const staticImage = useStaticImage();
+
+  return (
+    <BackgroundImage
+      fluid={staticImage}
       css={css`
-        width: 100%;
-        margin: -25% 0 0 0;
+        height: 200px;
       `}
     />
-  </div>
-);
+  );
+};
 
 export default Banner;

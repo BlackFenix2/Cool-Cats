@@ -8,7 +8,7 @@ import CatCard from 'src/components/CoolCats/CatCard';
 
 const CoolCats = () => (
   <>
-    <SEO title="Cool Cats" />
+    <SEO title="Cool Cats List" />
     <Row gutter={16}>
       {new Array(12).fill(0).map((item, i) => (
         <Col
