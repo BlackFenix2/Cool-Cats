@@ -3,17 +3,23 @@ import { Card, Icon } from 'antd';
 
 interface Props {
   img: any;
+  description: string;
+  urls: any;
+  user: any;
 }
 const CatCard = (props: Props) => (
   <Card
-    cover={<img src={props.img} alt="creepy cat" />}
+    cover={<img src={props.urls.full} alt={props.description} />}
     actions={[
       <Icon key="like" type="like" />,
       <Icon key="dislike" type="dislike" />,
       <Icon key="elip" type="ellipsis" />
     ]}
   >
-    <Card.Meta title="creepy cat" description="this cat is creepy"></Card.Meta>
+    <Card.Meta
+      title={props.user.name}
+      description={props.description}
+    ></Card.Meta>
   </Card>
 );
 

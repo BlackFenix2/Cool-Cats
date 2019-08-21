@@ -1,33 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SEO from 'src/components/SEO';
-import { Row, Col } from 'antd';
-import { css } from '@emotion/core';
+import { getCats } from 'src/services/api/unsplash';
+import CatCardList from 'src/components/CoolCats/CatCardList';
 
-import img from 'src/lib/img/cat-creep.jpg';
-import CatCard from 'src/components/CoolCats/CatCard';
+const CoolCats = () => {
+  const [catList, setCatList] = useState([]);
 
-const CoolCats = () => (
-  <>
-    <SEO title="Cool Cats List" />
-    <Row gutter={16}>
-      {new Array(12).fill(0).map((item, i) => (
-        <Col
-          key={i}
-          span={8}
-          xs={24}
-          sm={24}
-          md={8}
-          lg={8}
-          xl={8}
-          css={css`
-            padding-top: 20px;
-          `}
-        >
-          <CatCard img={img} />
-        </Col>
-      ))}
-    </Row>
-  </>
-);
+  useEffect(() => {
+    getCats().then(data => setCatList(data.results));
+
+    return () => {};
+  }, []);
+
+  return (
+    <>
+      <SEO title="Cool Cats List" />
+      <CatCardList catList={catList} />
+    </>
+  );
+};
 
 export default CoolCats;
